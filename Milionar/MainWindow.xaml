@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Milionar"
         mc:Ignorable="d"
-        MinHeight="480" 
-        MinWidth="640"
-        Title="MainWindow" Height="480" Width="640">
+        MinHeight="515" 
+        MinWidth="660"
+        MaxHeight="515"
+        MaxWidth="660"
+        Title="MainWindow" Height="515" Width="660">
         
     <Grid>
         <Frame Source="Game.xaml" ></Frame>

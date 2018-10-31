@@ -6,9 +6,9 @@
       xmlns:local="clr-namespace:Milionar"
       mc:Ignorable="d" d:DesignWidth="640"
       Title="Game" Height="480">
-      
 
-        <Grid Background="White">
+
+    <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="0*"/>
             <RowDefinition/>
@@ -27,12 +27,22 @@
             <Rectangle Fill="Black" HorizontalAlignment="Center" Height="15" Stroke="Black" VerticalAlignment="Center" Width="5730" Grid.ColumnSpan="3" Grid.Row="1" />
             <Ellipse Grid.ColumnSpan="1" Grid.Column="1" Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="71"  Grid.Row="1" Grid.RowSpan="1" Stroke="Black" VerticalAlignment="Center" Width="71" />
             <Label Content="30" Grid.Column="1" HorizontalAlignment="Center"  Grid.Row="1" VerticalAlignment="Center" FontSize="50"/>
-            
-            <Ellipse Grid.ColumnSpan="1" Grid.Column="0" Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="71"  Grid.Row="1" Grid.RowSpan="1" Stroke="Black" VerticalAlignment="Center" Width="71" />
-            <Label Content="1/2" Grid.Column="0" HorizontalAlignment="Center"  Grid.Row="1" VerticalAlignment="Center" FontSize="50"/>
-            
-            <Ellipse Grid.ColumnSpan="1" Grid.Column="2" Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="71"  Grid.Row="1" Grid.RowSpan="1" Stroke="Black" VerticalAlignment="Center" Width="71" />
-            <Label Content="Pu" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="1" VerticalAlignment="Center" FontSize="50"/>
+            <Button FontSize="30" Content="1/2" Grid.ColumnSpan="1" Grid.Column="0"  HorizontalAlignment="Center" Height="71"  Grid.Row="1" Grid.RowSpan="1"  VerticalAlignment="Center" Width="71">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="100"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Button  FontSize="30" Grid.Column="2" Grid.ColumnSpan="1" Content="Pu" HorizontalAlignment="Center" Height="71"  Grid.Row="1" Grid.RowSpan="1"  VerticalAlignment="Center" Width="71">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="100"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
 
             <TextBlock HorizontalAlignment="Stretch" Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="0" Grid.RowSpan="1" TextWrapping="Wrap" Text="Where do you proverbially wear your heart, if you show your true feelings?" Margin="10,10,10,10" VerticalAlignment="Stretch" FontSize="30"/>
             <Grid Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="3" >
@@ -47,28 +57,86 @@
                 <Rectangle Fill="Black" HorizontalAlignment="Center" Margin="0,0,0,31" Height="6" Stroke="Black" VerticalAlignment="Bottom" Width="5730" Grid.ColumnSpan="2" Grid.Row="0"  />
                 <Rectangle Fill="Black" HorizontalAlignment="Center" Margin="0,31,0,0" Height="6" Stroke="Black" VerticalAlignment="Top" Width="5730" Grid.ColumnSpan="2" Grid.Row="1"  />
                 <Border CornerRadius="20" BorderBrush="Black"  Margin="0,0,15,10" BorderThickness="6" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="0" Grid.Row="0" >
-                    <Button FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="40" Width="290" Content="On your collar"></Button>
-                </Border>
-                <Border CornerRadius="20" BorderBrush="Black"  Margin="15,0,0,10" BorderThickness="6" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="0" >
-                    <Button   FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="40" Width="290" Content="On your collar"></Button>
-                </Border>
-                <Border CornerRadius="20" BorderBrush="Black"  Margin="0,10,15,0" BorderThickness="6" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="0" Grid.Row="1" >
-                    <Button FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="40" Width="290" Content="On your collar"></Button>
-                </Border>
-                <Border CornerRadius="20" BorderBrush="Black" Panel.ZIndex="1000" Margin="15,10,0,0" BorderThickness="6" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1" >
-                    <Button   FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="40" Width="290" Content="On your collar">
+                    <Button Name="Button1" Click="Button1_Click" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="40" Width="290" Content="On your collar">
                         <Button.Resources>
                             <Style TargetType="{x:Type Border}">
-                                <Setter Property="CornerRadius" Value="20"></Setter>
+                                <Setter Property="CornerRadius" Value="15"></Setter>
                             </Style>
                         </Button.Resources>
                     </Button>
                 </Border>
+                <Border CornerRadius="20" BorderBrush="Black"  Margin="15,0,0,10" BorderThickness="6" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="0" >
+                    <Button Name="Button2" Click="Button2_Click"  FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="40" Width="290" Content="On your collar">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="15"></Setter>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </Border>
+                <Border CornerRadius="20" BorderBrush="Black"  Margin="0,10,15,0" BorderThickness="6" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="0" Grid.Row="1" >
+                    <Button Name="Button3" Click="Button3_Click" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="40" Width="290" Content="On your collar">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="15"></Setter>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </Border>
+                <Border CornerRadius="20" BorderBrush="Black" Panel.ZIndex="1000" Margin="15,10,0,0" BorderThickness="6" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1" >
+                    <Button Name="Button4" Click="Button4_Click" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="40" Width="290" Content="On your collar">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="15"></Setter>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </Border>
+                
 
             </Grid>
+            <Grid Grid.ColumnSpan="3" Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+
+                </Grid.ColumnDefinitions>
+                <ProgressBar Grid.ColumnSpan="15" HorizontalAlignment="Stretch" Maximum="15" Value="13" Height="30"  VerticalAlignment="Bottom" />
+                <Rectangle Height="30" Width="5" VerticalAlignment="Bottom" HorizontalAlignment="Right" Fill="Black" Grid.Column="0"></Rectangle>
+                <Rectangle Height="30" Width="5" VerticalAlignment="Bottom" HorizontalAlignment="Right" Fill="Black" Grid.Column="1"></Rectangle>
+                <Rectangle Height="30" Width="5" VerticalAlignment="Bottom" HorizontalAlignment="Right" Fill="Black" Grid.Column="2"></Rectangle>
+                <Rectangle Height="30" Width="5" VerticalAlignment="Bottom" HorizontalAlignment="Right" Fill="Black" Grid.Column="3"></Rectangle>
+                <Rectangle Height="30" Width="5" VerticalAlignment="Bottom" HorizontalAlignment="Right" Fill="Black" Grid.Column="4"></Rectangle>
+                <Rectangle Height="30" Width="5" VerticalAlignment="Bottom" HorizontalAlignment="Right" Fill="Black" Grid.Column="5"></Rectangle>
+                <Rectangle Height="30" Width="5" VerticalAlignment="Bottom" HorizontalAlignment="Right" Fill="Black" Grid.Column="6"></Rectangle>
+                <Rectangle Height="30" Width="5" VerticalAlignment="Bottom" HorizontalAlignment="Right" Fill="Black" Grid.Column="7"></Rectangle>
+                <Rectangle Height="30" Width="5" VerticalAlignment="Bottom" HorizontalAlignment="Right" Fill="Black" Grid.Column="8"></Rectangle>
+                <Rectangle Height="30" Width="5" VerticalAlignment="Bottom" HorizontalAlignment="Right" Fill="Black" Grid.Column="9"></Rectangle>
+                <Rectangle Height="30" Width="5" VerticalAlignment="Bottom" HorizontalAlignment="Right" Fill="Black" Grid.Column="10"></Rectangle>
+                <Rectangle Height="30" Width="5" VerticalAlignment="Bottom" HorizontalAlignment="Right" Fill="Black" Grid.Column="11"></Rectangle>
+                <Rectangle Height="30" Width="5" VerticalAlignment="Bottom" HorizontalAlignment="Right" Fill="Black" Grid.Column="12"></Rectangle>
+                <Rectangle Height="30" Width="5" VerticalAlignment="Bottom" HorizontalAlignment="Right" Fill="Black" Grid.Column="13"></Rectangle>
+  
+
+                <Label Content="$250,000" FontSize="15" FontWeight="Bold"  Grid.ColumnSpan="15" HorizontalAlignment="Center" Height="30"  VerticalAlignment="Bottom"></Label>
+            </Grid >
+            
 
         </Grid>
-
+        
 
     </Grid>
 </Page>
