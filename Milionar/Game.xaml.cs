@@ -35,6 +35,8 @@ namespace Milionar
         private int GoodA = 0;
         private int Round = 0;
         private int ButtonPlace = 0;
+        private string Prize = "100$";
+
         public Game()
         {
             
@@ -87,12 +89,15 @@ namespace Milionar
             }
         }
 
-
         private void GamePlay()
         {
+            GameEchoData();
+        }
+        private void GameEchoData()
+        {
             GoodA = rnd.Next(0, 4);
-
-            
+            PrizeUi.Content = Prize;
+            Progress.Value = Round + 1;
             Qestion.Text = BaseToString(Qestions[Round].question);
 
             LOfButtons[GoodA].Content = BaseToString(Qestions[Round].correct_answer);
@@ -159,6 +164,70 @@ namespace Milionar
 
             }
 
+        }
+        private void AddPrize()
+        {
+            if (Round == 0)
+            {
+                Prize = "100$";
+            }
+            else if (Round == 1)
+            {
+                Prize = "200$";
+            }
+            else if (Round == 2)
+            {
+                Prize = "300$";
+            }
+            else if (Round == 3)
+            {
+                Prize = "500$";
+            }
+            else if (Round == 4)
+            {
+                Prize = "1,000$";
+            }
+            else if (Round == 5)
+            {
+                Prize = "2,000$";
+            }
+            else if (Round == 6)
+            {
+                Prize = "4,000$";
+            }
+            else if (Round == 7)
+            {
+                Prize = "8,000$";
+            }
+            else if (Round == 8)
+            {
+                Prize = "16,000$";
+            }
+            else if (Round == 9)
+            {
+                Prize = "32,000$";
+            }
+            else if (Round == 10)
+            {
+                Prize = "64,000$";
+            }
+            else if (Round == 11)
+            {
+                Prize = "125,000$";
+            }
+            else if (Round == 12)
+            {
+                Prize = "250,000$";
+            }
+            else if (Round == 13)
+            {
+                Prize = "500,000$";
+            }
+            else if (Round == 14)
+            {
+                Prize = "1,000,000$";
+            }
+            
         }
         //https://opentdb.com/
     }
