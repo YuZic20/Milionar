@@ -25,9 +25,9 @@
                 <RowDefinition Height="2*" />
                 <RowDefinition Height="5*" />
             </Grid.RowDefinitions>
-            <Image HorizontalAlignment="Center" VerticalAlignment="Center" Width="960" Height="815" Source="img/WWM.jpg" Grid.ColumnSpan="999" Grid.RowSpan="999"></Image>
+            <Image HorizontalAlignment="Center" VerticalAlignment="Center" Width="960" Height="815" Source="Images\WWM.jpg" Grid.ColumnSpan="999" Grid.RowSpan="999"></Image>
             <Rectangle Fill="Black" HorizontalAlignment="Center" Height="15" Stroke="Black" VerticalAlignment="Center" Width="5730" Grid.ColumnSpan="3" Grid.Row="1" />
-            <Image Source="img/WWM_Logo.png" Grid.ColumnSpan="1" Grid.Column="1" HorizontalAlignment="Center" Height="90"  Grid.Row="1" Grid.RowSpan="1" VerticalAlignment="Center" Width="790"></Image>
+            <Image Source="Images/WWM_Logo.png" Grid.ColumnSpan="1" Grid.Column="1" HorizontalAlignment="Center" Height="90"  Grid.Row="1" Grid.RowSpan="1" VerticalAlignment="Center" Width="790"></Image>
             
             
             <Button FontSize="30" Name="HelpHalf" Click="HelpHalf_Click" Content="1/2" Grid.ColumnSpan="1" Grid.Column="0"  HorizontalAlignment="Center" Height="71"  Grid.Row="1" Grid.RowSpan="1"  VerticalAlignment="Center" Width="71">

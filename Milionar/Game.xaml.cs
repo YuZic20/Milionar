@@ -212,7 +212,7 @@ namespace Milionar
             Progress.Value = Round + 1;
             Qestion.Text = BaseToString(Qestions[Round].question);
 
-            LOfButtons[GoodA].Background = DefalutActiveColor; //debug 
+            //LOfButtons[GoodA].Background = DefalutActiveColor; //debug 
 
             LOfButtons[GoodA].Content = BaseToString(Qestions[Round].correct_answer);
             for (int i = 0; i <4; i++)
