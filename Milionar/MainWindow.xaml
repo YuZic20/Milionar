@@ -12,6 +12,6 @@
         Title="MainWindow" Height="515" Width="660">
         
     <Grid>
-        <Frame Source="Game.xaml" ></Frame>
+        <Frame Name="MainFrame" NavigationUIVisibility="Hidden" Source="GameMenu.xaml" ></Frame>
     </Grid>
 </Window>

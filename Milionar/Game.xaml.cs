@@ -173,7 +173,8 @@ namespace Milionar
                 //do stuff
                 
                 GamePlay();
-                GameEchoData();
+                if (lost) { Qestion.Text = "you lost"; return; } else { GameEchoData(); }
+                
                 ButtonPress = -1;
                 //color stuff
                 LastButtonPr = -1;
@@ -203,6 +204,7 @@ namespace Milionar
             else
             {
                 lost = true;
+                Qestion.Text = "you lost";
             }
         }
         private void GameEchoData()
